@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* WebKit (Chrome, Safari) */
+input[type="range"]::-webkit-slider-thumb {
+    display: none;
+  }
+  
+  /* Firefox */
+  input[type="range"]::-moz-range-thumb {
+    display: none;
+  }
+  
+  /* Standard (should work in most modern browsers) */
+  input[type="range"]::-ms-thumb {
+    display: none;
+  }
+
+  .split{
+    transform: translateY(100);
+  }
+
+  .shapeFuture{
+    overflow: hidden;
+    transform: translateY(-10000);
+  }
