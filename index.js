@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         ease: "power4.inOut",
       },
       y: 0,
+      opacity:1,
       duration: 1,
     }
   );
@@ -379,6 +380,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       transformOrigin: "bottom",
     },
     {
+      
       scaleY: 1.2,
       repeat: -1,
       stagger: .1,
@@ -387,4 +389,93 @@ document.addEventListener("DOMContentLoaded", (event) => {
       duration:2
     }
   );
+
+  //section 5
+
+  gsap.fromTo(
+    "#getstarted-icon",
+    {
+      scale: 5,
+      opacity:0,
+      transformOrigin: "bottom",
+    },
+    {
+      scrollTrigger: {
+        trigger: "#section-5",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+        markers: true
+      },
+      scale: 1,
+      opacity:1,
+      duration:.8,
+      ease: "elastic.inOut(0.5,1.5)",
+    }
+  );
+
+
+  const getStarted = new SplitType("#get-started")
+
+  gsap.fromTo(
+    getStarted.chars,
+    {
+      y: 200,
+      opacity:0,
+      transformOrigin: "bottom",
+    },
+    {
+      scrollTrigger: {
+        trigger: "#section-5",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+        markers: true
+      },
+      y: 10,
+      opacity:1,
+      stagger: .08,
+      ease: "power1.inOut",
+    }
+  );
+  gsap.fromTo(
+    ".demo-btn",
+    {
+      scale: 0,
+      transformOrigin: "bottom",
+    },
+    {
+      scrollTrigger: {
+        trigger: "#section-5",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+        markers: true
+      },
+      scale: 1,
+      stagger: .08,
+      ease: "power1.inOut",
+    }
+  );
+
+  // footer 
+
+  gsap.fromTo(
+    "#qr-code",
+    {
+      scale: 0,
+      transformOrigin: "bottom",
+    },
+    {
+      scrollTrigger: {
+        trigger: "#footer",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+        markers: true
+      },
+      scale: 1,
+      stagger: .08,
+      ease: "power1.inOut",
+    }
+  );
 });
+
+
+
