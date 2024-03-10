@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "top center",
         end: "bottom 1000px",
         toggleActions: "restart pause resume reset",
-        // markers: true,
+        markers: true,
         ease: "power4.inOut",
       },
       y: 0,
@@ -166,7 +166,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: ".section-1",
         start: "top center",
         toggleActions: "restart pause resume restart",
-        // markers: true
+        markers: true
       },
       scale: 1, // Updated to scaleX
       duration: 1,
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: maximize2.words,
         start: "bottom center",
         toggleActions: "play pause resume reset",
-        // markers: true
+        markers: true
       },
       scale: 1, // Updated to scaleX
       duration: 1,
@@ -243,7 +243,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: maximize2.words,
         start: "bottom center",
         toggleActions: "play pause resume reset",
-        // markers: true
+        markers: true
       },
       scale: 1, // Updated to scaleX
       duration: 1.5,
@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: maximize2.words,
         start: "bottom center",
         toggleActions: "play pause resume reset",
-        // markers: true
+        markers: true
       },
       scale: 1, // Updated to scaleX
       duration: 1,
@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-4",
         start: "top center",
         toggleActions: "play pause resume reset",
-        markers: true,
+        // markers: true,
       },
       y: 0, // Updated to scaleX
       opacity: 1,
@@ -304,7 +304,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-4",
         start: "top center",
         toggleActions: "play pause resume reset",
-        // markers: true
+        markers: true
       },
       y: 0, // Updated to scaleX
       duration: 1,
@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-4",
         start: "top center",
         toggleActions: "play pause resume reset",
-        // markers: true
+        markers: true
       },
       y: 0, // Updated to scaleX
       duration: 1,
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-4",
         start: "top center",
         toggleActions: "play pause resume reset",
-        // markers: true
+        markers: true
       },
       y: 0, // Updated to scaleX
       duration: 1,
@@ -404,7 +404,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-5",
         start: "top center",
         toggleActions: "play pause resume reset",
-        markers: true
+        // markers: true
       },
       scale: 1,
       opacity:1,
@@ -428,7 +428,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-5",
         start: "top center",
         toggleActions: "play pause resume reset",
-        markers: true
+        // markers: true
       },
       y: 10,
       opacity:1,
@@ -447,7 +447,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-5",
         start: "top center",
         toggleActions: "play pause resume reset",
-        markers: true
+        // markers: true
       },
       scale: 1,
       stagger: .08,
@@ -468,7 +468,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#footer",
         start: "top center",
         toggleActions: "play pause resume reset",
-        markers: true
+        // markers: true
       },
       scale: 1,
       stagger: .08,
