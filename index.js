@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
       scale: 1, // Updated to scaleX
       duration: 1,
-      ease: "power4.inOut", // Moved ease to the tween properties
+      ease: "power4.inOut",
     }
   );
 
@@ -192,7 +192,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       y: 10, // Updated to scaleX
       duration: 1,
       stagger: 0.04,
-      ease: "power4.inOut", // Moved ease to the tween properties
+      ease: "power4.inOut",
     }
   );
 
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       y: 10, // Updated to scaleX
       duration: 1,
       stagger: 0.04,
-      ease: "power4.inOut", // Moved ease to the tween properties
+      ease: "power4.inOut",
     }
   );
 
@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scale: 1, // Updated to scaleX
       duration: 1,
       stagger: 0.04,
-      ease: "power4.inOut", // Moved ease to the tween properties
+      ease: "power4.inOut",
     }
   );
   gsap.fromTo(
@@ -247,7 +247,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scale: 1, // Updated to scaleX
       duration: 1.5,
       stagger: 0.04,
-      ease: "power4.inOut", // Moved ease to the tween properties
+      ease: "power4.inOut",
     }
   );
 
@@ -265,8 +265,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       },
       scale: 1, // Updated to scaleX
       duration: 1,
-      stagger: 0.04,
-      ease: "power1.inOut", // Moved ease to the tween properties
+      ease: "power1.inOut",
     }
   );
 
@@ -274,101 +273,118 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
   var tls4 = gsap.timeline();
 
-  tls4
-    .fromTo(
-      "#turning-1",
-      {
-        y: 200,
-        opacity: 0,
+  gsap.fromTo(
+    "#turning-1",
+    {
+      y: 200,
+      opacity: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#section-4",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+        markers: true,
       },
-      {
-        scrollTrigger: {
-          trigger: "#section-4",
-          start: "top center",
-          toggleActions: "play pause resume reset",
-          markers: true,
-        },
-        y: 0, // Updated to scaleX
-        opacity: 1,
-        duration: 1,
-        ease: "power1.inOut", // Moved ease to the tween properties
-      }
-    )
-    .fromTo(
-      "#turning-2",
-      {
-        y: 200,
-        opacity: 0,
+      y: 0, // Updated to scaleX
+      opacity: 1,
+      duration: 1,
+      ease: "power1.inOut",
+    }
+  );
+  gsap.fromTo(
+    "#turning-2",
+    {
+      y: 200,
+      opacity: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#section-4",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+        // markers: true
       },
-      {
-        scrollTrigger: {
-          trigger: "#section-4",
-          start: "top center",
-          toggleActions: "play pause resume reset",
-          // markers: true
-        },
-        y: 0, // Updated to scaleX
-        duration: 1,
-        opacity: 1,
-        ease: "power1.inOut", // Moved ease to the tween properties
-      }
-    )
-    .fromTo(
-      "#insights-desk",
-      {
-        y: 200,
-        opacity: 0,
+      y: 0, // Updated to scaleX
+      duration: 1,
+      opacity: 1,
+      delay: 1,
+      ease: "power1.inOut",
+    }
+  );
+  gsap.fromTo(
+    "#insights-desk",
+    {
+      y: 200,
+      opacity: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#section-4",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+        // markers: true
       },
-      {
-        scrollTrigger: {
-          trigger: "#section-4",
-          start: "top center",
-          toggleActions: "play pause resume reset",
-          // markers: true
-        },
-        y: 0, // Updated to scaleX
-        duration: 1,
-        opacity: 1,
-        ease: "power1.inOut", // Moved ease to the tween properties
-      }
-    )
-    .fromTo(
-      "#insights-mob",
-      {
-        y: 300,
-        opacity: 0,
-      },
-      {
-        scrollTrigger: {
-          trigger: "#section-4",
-          start: "top center",
-          toggleActions: "play pause resume reset",
-          // markers: true
-        },
-        y: 0, // Updated to scaleX
-        duration: 1,
-        opacity: 1,
+      y: 0, // Updated to scaleX
+      duration: 1,
+      opacity: 1,
+      delay: 1.5,
+      ease: "power1.inOut",
+    }
+  );
 
-        stagger: 0.04,
-        ease: "power1.inOut", // Moved ease to the tween properties
-      }
-    );
+  gsap.fromTo(
+    "#insights-mob",
+    {
+      y: 300,
+      opacity: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#section-4",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+        // markers: true
+      },
+      y: 0, // Updated to scaleX
+      duration: 1,
+      opacity: 1,
+      delay: 2,
+      ease: "power1.inOut",
+    }
+  );
 
-  //   gsap.fromTo(
-  //     "#redy-for",
-  //     {
-  //       y: 100,
-  //     },
-  //     {
-  //       scrollTrigger: {
-  //         trigger: ".section-1",
-  //         start: "top center",
-  //         end:"bottom 1000px",
-  //         toggleActions: "restart pause resume restart",
-  //         markers: true,
-  //         ease: "power4.inOut",
-  //       },
-  //       y: 0,
-  //     }
-  //   );
+  gsap.fromTo(
+    ".bar-insights",
+    {
+      scaleY: 1,
+      transformOrigin: "bottom",
+    },
+    {
+      scaleY: 1.2,
+      repeat: -1,
+      stagger: {
+        each: 0.1,
+        grid: "auto",
+      },
+      ease: "power1.inOut",
+      yoyo: true,
+    }
+  );
+
+  gsap.fromTo(
+    ".bar-insights-mob",
+    {
+      scaleY: 1,
+      transformOrigin: "bottom",
+    },
+    {
+      scaleY: 1.2,
+      repeat: -1,
+      stagger: .1,
+      ease: "power1.inOut",
+      yoyo: true,
+      duration:2
+    }
+  );
 });
