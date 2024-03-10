@@ -20,8 +20,9 @@ input[type="range"]::-webkit-slider-thumb {
   .split{
     transform: translateY(100);
   }
+  
 
-  .shapeFuture{
-    overflow: hidden;
-    transform: translateY(-10000);
+
+  * {
+    box-sizing: border-box;
   }
