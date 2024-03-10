@@ -2,12 +2,10 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
 
-
   const text = new SplitType(".split");
   const helpsYou = new SplitType(".helpsYou");
   const text3 = new SplitType(".split3");
   const shapeFuture = new SplitType(".shapeFuture");
-
 
   gsap.fromTo(
     text.chars,
@@ -20,70 +18,67 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: text.chars,
         start: "300px 500px",
         toggleActions: "restart pause resume restart",
-        markers: true,
         ease: "power1.inOut",
       },
       opacity: 1,
       y: 0,
       stagger: 0.1,
     }
-  )
-    gsap.fromTo(
-      helpsYou.chars,
-      {
-        opacity: 0,
-        y: 50,
+  );
+  gsap.fromTo(
+    helpsYou.chars,
+    {
+      opacity: 0,
+      y: 50,
+    },
+    {
+      scrollTrigger: {
+        trigger: text.chars,
+        start: "300px 500px",
+        toggleActions: "restart pause resume restart",
+        ease: "power1.inOut",
       },
-      {
-        scrollTrigger: {
-          trigger: text.chars,
-          start: "300px 500px",
-          toggleActions: "restart pause resume restart",
-          markers: true,
-          ease: "power1.inOut",
-        },
-        opacity: 1,
-        stagger: 0.1,
-        y: 0,
-      }
-    )
-    gsap.fromTo(
-      text3.chars,
-      {
-        opacity: 0,
-        y: 50,
+      opacity: 1,
+      stagger: 0.1,
+      y: 0,
+    }
+  );
+  gsap.fromTo(
+    text3.chars,
+    {
+      opacity: 0,
+      y: 50,
+    },
+    {
+      scrollTrigger: {
+        trigger: text.chars,
+        start: "300px 500px",
+        toggleActions: "restart pause resume restart",
+        ease: "power1.inOut",
       },
-      {
-        scrollTrigger: {
-          trigger: text.chars,
-          start: "300px 500px",
-          toggleActions: "restart pause resume restart",
-          ease: "power1.inOut",
-        },
-        opacity: 1,
-        stagger: 0.1,
-        y: 0,
-      }
-    )
-    gsap.fromTo(
-      shapeFuture.chars,
-      {
-        opacity: 0,
-        y: 50,
+      opacity: 1,
+      stagger: 0.1,
+      y: 0,
+    }
+  );
+  gsap.fromTo(
+    shapeFuture.chars,
+    {
+      opacity: 0,
+      y: 50,
+    },
+    {
+      scrollTrigger: {
+        trigger: text.chars,
+        start: "300px 500px",
+        toggleActions: "restart pause resume restart",
+        ease: "power1.inOut",
       },
-      {
-        scrollTrigger: {
-          trigger: text.chars,
-          start: "300px 500px",
-          toggleActions: "restart pause resume restart",
-          ease: "power1.inOut",
-        },
-        opacity: 1,
-        stagger: 0.1,
-        y: 0,
-      }
-    );
-
+      opacity: 1,
+      stagger: 0.1,
+      y: 0,
+    }
+  );
 
   gsap.fromTo(
     "#graph-icon",
@@ -137,48 +132,243 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
   );
 
+  // Section 2 =================================
+
+  const strategic = new SplitType("#strategic-success");
+
   gsap.fromTo(
-    "#strategic-success",
+    strategic.lines,
+    {
+      y: 100,
+      opacity: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".section-1",
+        start: "top center",
+        end: "bottom 1000px",
+        toggleActions: "restart pause resume reset",
+        // markers: true,
+        ease: "power4.inOut",
+      },
+      y: 0,
+      duration: 1,
+    }
+  );
+  gsap.fromTo(
+    ".setting-report",
+    {
+      scale: 0.5,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".section-1",
+        start: "top center",
+        toggleActions: "restart pause resume restart",
+        // markers: true
+      },
+      scale: 1, // Updated to scaleX
+      duration: 1,
+      ease: "power4.inOut", // Moved ease to the tween properties
+    }
+  );
+
+  // section-3===============================
+
+  const maximize = new SplitType(".maximize");
+  const maximize2 = new SplitType(".maximize2");
+
+  gsap.fromTo(
+    maximize.chars,
+    {
+      y: 200,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#maximize-sec",
+        start: "top 500px",
+        toggleActions: "play pause resume reset",
+      },
+      y: 10, // Updated to scaleX
+      duration: 1,
+      stagger: 0.04,
+      ease: "power4.inOut", // Moved ease to the tween properties
+    }
+  );
+
+  gsap.fromTo(
+    maximize2.chars,
+    {
+      y: 200,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#maximize-sec",
+        start: "top center",
+        toggleActions: "play pause resume reset",
+      },
+      y: 10, // Updated to scaleX
+      duration: 1,
+      stagger: 0.04,
+      ease: "power4.inOut", // Moved ease to the tween properties
+    }
+  );
+
+  gsap.fromTo(
+    "#sys-growth",
     {
       scale: 0,
     },
     {
       scrollTrigger: {
-        trigger: "#strategic-success",
-        start: "top center",
-        toggleActions: "restart pause resume restart",
-        markers: true,
-        ease: "power1.inOut",
+        trigger: maximize2.words,
+        start: "bottom center",
+        toggleActions: "play pause resume reset",
+        // markers: true
       },
-      scale: 1,
+      scale: 1, // Updated to scaleX
+      duration: 1,
+      stagger: 0.04,
+      ease: "power4.inOut", // Moved ease to the tween properties
+    }
+  );
+  gsap.fromTo(
+    "#heartbeat",
+    {
+      scale: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: maximize2.words,
+        start: "bottom center",
+        toggleActions: "play pause resume reset",
+        // markers: true
+      },
+      scale: 1, // Updated to scaleX
+      duration: 1.5,
+      stagger: 0.04,
+      ease: "power4.inOut", // Moved ease to the tween properties
     }
   );
 
+  gsap.fromTo(
+    "#marquee",
+    {
+      scale: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: maximize2.words,
+        start: "bottom center",
+        toggleActions: "play pause resume reset",
+        // markers: true
+      },
+      scale: 1, // Updated to scaleX
+      duration: 1,
+      stagger: 0.04,
+      ease: "power1.inOut", // Moved ease to the tween properties
+    }
+  );
 
-  function createScrollTriggerAnimation(element, trigger, start) {
-    gsap.fromTo(
-      element,
+  // Swection 4
+
+  var tls4 = gsap.timeline();
+
+  tls4
+    .fromTo(
+      "#turning-1",
       {
-        y: 50,
+        y: 200,
         opacity: 0,
       },
       {
         scrollTrigger: {
-          trigger: trigger,
-          start: start,
+          trigger: "#section-4",
+          start: "top center",
           toggleActions: "play pause resume reset",
-          // markers: true,
-          ease: "power1.inOut",
+          markers: true,
         },
-        y: 0,
+        y: 0, // Updated to scaleX
         opacity: 1,
-        duration: 1.5,
+        duration: 1,
+        ease: "power1.inOut", // Moved ease to the tween properties
+      }
+    )
+    .fromTo(
+      "#turning-2",
+      {
+        y: 200,
+        opacity: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#section-4",
+          start: "top center",
+          toggleActions: "play pause resume reset",
+          // markers: true
+        },
+        y: 0, // Updated to scaleX
+        duration: 1,
+        opacity: 1,
+        ease: "power1.inOut", // Moved ease to the tween properties
+      }
+    )
+    .fromTo(
+      "#insights-desk",
+      {
+        y: 200,
+        opacity: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#section-4",
+          start: "top center",
+          toggleActions: "play pause resume reset",
+          // markers: true
+        },
+        y: 0, // Updated to scaleX
+        duration: 1,
+        opacity: 1,
+        ease: "power1.inOut", // Moved ease to the tween properties
+      }
+    )
+    .fromTo(
+      "#insights-mob",
+      {
+        y: 300,
+        opacity: 0,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#section-4",
+          start: "top center",
+          toggleActions: "play pause resume reset",
+          // markers: true
+        },
+        y: 0, // Updated to scaleX
+        duration: 1,
+        opacity: 1,
+
+        stagger: 0.04,
+        ease: "power1.inOut", // Moved ease to the tween properties
       }
     );
-  }
-  
-  // Section 2 Animations
-  createScrollTriggerAnimation("#strategic-success", shapeFuture.words, "center center");
-  createScrollTriggerAnimation("#setting-reports", "#strategic-success", "top bottom");
-  
+
+  //   gsap.fromTo(
+  //     "#redy-for",
+  //     {
+  //       y: 100,
+  //     },
+  //     {
+  //       scrollTrigger: {
+  //         trigger: ".section-1",
+  //         start: "top center",
+  //         end:"bottom 1000px",
+  //         toggleActions: "restart pause resume restart",
+  //         markers: true,
+  //         ease: "power4.inOut",
+  //       },
+  //       y: 0,
+  //     }
+  //   );
 });
