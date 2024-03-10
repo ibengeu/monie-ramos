@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
   const text = new SplitType(".split");
-  const text2 = new SplitType(".split2");
+  const helpsYou = new SplitType(".helpsYou");
   const text3 = new SplitType(".split3");
   const shapeFuture = new SplitType(".shapeFuture");
 
@@ -16,18 +16,32 @@ document.addEventListener("DOMContentLoaded", (event) => {
       y: 50,
     },
     {
+      scrollTrigger: {
+        trigger: text.chars,
+        start: "300px 500px",
+        toggleActions: "restart pause resume restart",
+        markers: true,
+        ease: "power1.inOut",
+      },
       opacity: 1,
       y: 0,
       stagger: 0.1,
     }
   )
     gsap.fromTo(
-      text2.chars,
+      helpsYou.chars,
       {
         opacity: 0,
-        y: 10,
+        y: 50,
       },
       {
+        scrollTrigger: {
+          trigger: text.chars,
+          start: "300px 500px",
+          toggleActions: "restart pause resume restart",
+          markers: true,
+          ease: "power1.inOut",
+        },
         opacity: 1,
         stagger: 0.1,
         y: 0,
@@ -37,9 +51,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
       text3.chars,
       {
         opacity: 0,
-        y: 10,
+        y: 50,
       },
       {
+        scrollTrigger: {
+          trigger: text.chars,
+          start: "300px 500px",
+          toggleActions: "restart pause resume restart",
+          ease: "power1.inOut",
+        },
         opacity: 1,
         stagger: 0.1,
         y: 0,
@@ -49,9 +69,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
       shapeFuture.chars,
       {
         opacity: 0,
-        y: 10,
+        y: 50,
       },
       {
+        scrollTrigger: {
+          trigger: text.chars,
+          start: "300px 500px",
+          toggleActions: "restart pause resume restart",
+          ease: "power1.inOut",
+        },
         opacity: 1,
         stagger: 0.1,
         y: 0,
@@ -65,6 +91,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scale: 0,
     },
     {
+      scrollTrigger: {
+        trigger: text.chars,
+        start: "300px 500px",
+        toggleActions: "restart pause resume restart",
+        ease: "power1.inOut",
+      },
       scale: 1,
       duration: ".7",
     },
@@ -77,6 +109,12 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scale: 0,
     },
     {
+      scrollTrigger: {
+        trigger: text.chars,
+        start: "300px 500px",
+        toggleActions: "restart pause resume restart",
+        ease: "power1.inOut",
+      },
       scale: 1,
       duration: ".7",
     },
@@ -89,16 +127,39 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scale: 0,
     },
     {
+      scrollTrigger: {
+        trigger: text.chars,
+        start: "300px 500px",
+        toggleActions: "restart pause resume restart",
+        ease: "power1.inOut",
+      },
       scale: 1,
     }
   );
 
- 
+  gsap.fromTo(
+    "#strategic-success",
+    {
+      scale: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#strategic-success",
+        start: "top center",
+        toggleActions: "restart pause resume restart",
+        markers: true,
+        ease: "power1.inOut",
+      },
+      scale: 1,
+    }
+  );
+
+
   function createScrollTriggerAnimation(element, trigger, start) {
     gsap.fromTo(
       element,
       {
-        y: 100,
+        y: 50,
         opacity: 0,
       },
       {
@@ -106,7 +167,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
           trigger: trigger,
           start: start,
           toggleActions: "play pause resume reset",
-          markers: true,
+          // markers: true,
           ease: "power1.inOut",
         },
         y: 0,
