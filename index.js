@@ -1,4 +1,3 @@
-// use a script tag or an external JS file
 document.addEventListener("DOMContentLoaded", (event) => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: text.chars,
+        trigger: text.chars[0],
         start: "300px 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -25,6 +24,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       stagger: 0.1,
     }
   );
+
   gsap.fromTo(
     helpsYou.chars,
     {
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: text.chars,
+        trigger: helpsYou.chars[0],
         start: "300px 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       y: 0,
     }
   );
+
   gsap.fromTo(
     text3.chars,
     {
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: text.chars,
+        trigger: text3.chars[0],
         start: "300px 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
       y: 0,
     }
   );
+
   gsap.fromTo(
     shapeFuture.chars,
     {
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: text.chars,
+        trigger: shapeFuture.chars[0],
         start: "300px 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -87,15 +89,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: text.chars,
+        trigger: "#graph-icon",
         start: "300px 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
       scale: 1,
-      duration: ".7",
+      duration: 0.7,
     },
-    "-=.7"
+    "-=0.7"
   );
 
   gsap.fromTo(
@@ -105,15 +107,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: text.chars,
+        trigger: "#comp-image",
         start: "300px 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
       scale: 1,
-      duration: ".7",
+      duration: 0.7,
     },
-    "-=.7"
+    "-=0.7"
   );
 
   gsap.fromTo(
@@ -123,7 +125,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: text.chars,
+        trigger: "#music-icon",
         start: "300px 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -148,14 +150,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "top center",
         end: "bottom 1000px",
         toggleActions: "restart pause resume reset",
-        ,
         ease: "power4.inOut",
       },
       y: 0,
-      opacity:1,
+      opacity: 1,
       duration: 1,
     }
   );
+
   gsap.fromTo(
     ".setting-report",
     {
@@ -166,15 +168,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: ".section-1",
         start: "top center",
         toggleActions: "restart pause resume restart",
-        
       },
-      scale: 1, // Updated to scaleX
+      scaleX: 1, // Updated to scaleX
       duration: 1,
       ease: "power4.inOut",
     }
   );
 
-  // section-3===============================
+  // Section 3 =================================
 
   const maximize = new SplitType(".maximize");
   const maximize2 = new SplitType(".maximize2");
@@ -190,7 +191,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "top 500px",
         toggleActions: "play pause resume reset",
       },
-      y: 10, // Updated to scaleX
+      y: 10, // Updated to y
       duration: 1,
       stagger: 0.04,
       ease: "power4.inOut",
@@ -208,7 +209,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "top center",
         toggleActions: "play pause resume reset",
       },
-      y: 10, // Updated to scaleX
+      y: 10, // Updated to y
       duration: 1,
       stagger: 0.04,
       ease: "power4.inOut",
@@ -225,14 +226,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: maximize2.words,
         start: "bottom center",
         toggleActions: "play pause resume reset",
-        
       },
-      scale: 1, // Updated to scaleX
+      scaleX: 1, // Updated to scaleX
       duration: 1,
       stagger: 0.04,
       ease: "power4.inOut",
     }
   );
+
   gsap.fromTo(
     "#heartbeat",
     {
@@ -243,9 +244,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: maximize2.words,
         start: "bottom center",
         toggleActions: "play pause resume reset",
-        
       },
-      scale: 1, // Updated to scaleX
+      scaleX: 1, // Updated to scaleX
       duration: 1.5,
       stagger: 0.04,
       ease: "power4.inOut",
@@ -262,17 +262,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: maximize2.words,
         start: "bottom center",
         toggleActions: "play pause resume reset",
-        
       },
-      scale: 1, // Updated to scaleX
+      scaleX: 1, // Updated to scaleX
       duration: 1,
       ease: "power1.inOut",
     }
   );
 
-  // Swection 4
-
-  var tls4 = gsap.timeline();
+  // Section 4 =================================
 
   gsap.fromTo(
     "#turning-1",
@@ -285,14 +282,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-4",
         start: "top center",
         toggleActions: "play pause resume reset",
-        // ,
       },
-      y: 0, // Updated to scaleX
+      y: 0, // Updated to y
       opacity: 1,
       duration: 1,
       ease: "power1.inOut",
     }
   );
+
   gsap.fromTo(
     "#turning-2",
     {
@@ -304,15 +301,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-4",
         start: "top center",
         toggleActions: "play pause resume reset",
-        
       },
-      y: 0, // Updated to scaleX
+      y: 0, // Updated to y
       duration: 1,
       opacity: 1,
       delay: 1,
       ease: "power1.inOut",
     }
   );
+
   gsap.fromTo(
     "#insights-desk",
     {
@@ -324,9 +321,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-4",
         start: "top center",
         toggleActions: "play pause resume reset",
-        
       },
-      y: 0, // Updated to scaleX
+      y: 0, // Updated to y
       duration: 1,
       opacity: 1,
       delay: 1.5,
@@ -345,9 +341,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-4",
         start: "top center",
         toggleActions: "play pause resume reset",
-        
       },
-      y: 0, // Updated to scaleX
+      y: 0, // Updated to y
       duration: 1,
       opacity: 1,
       delay: 2,
@@ -380,23 +375,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
       transformOrigin: "bottom",
     },
     {
-      
       scaleY: 1.2,
       repeat: -1,
-      stagger: .1,
+      stagger: 0.1,
       ease: "power1.inOut",
       yoyo: true,
-      duration:2
+      duration: 2,
     }
   );
 
-  //section 5
+  // Section 5 =================================
 
   gsap.fromTo(
     "#getstarted-icon",
     {
       scale: 5,
-      opacity:0,
+      opacity: 0,
       transformOrigin: "bottom",
     },
     {
@@ -404,23 +398,21 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-5",
         start: "top center",
         toggleActions: "play pause resume reset",
-        // 
       },
       scale: 1,
-      opacity:1,
-      duration:.8,
+      opacity: 1,
+      duration: 0.8,
       ease: "elastic.inOut(0.5,1.5)",
     }
   );
 
-
-  const getStarted = new SplitType("#get-started")
+  const getStarted = new SplitType("#get-started");
 
   gsap.fromTo(
     getStarted.chars,
     {
       y: 200,
-      opacity:0,
+      opacity: 0,
       transformOrigin: "bottom",
     },
     {
@@ -428,14 +420,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-5",
         start: "top center",
         toggleActions: "play pause resume reset",
-        // 
       },
       y: 10,
-      opacity:1,
-      stagger: .08,
+      opacity: 1,
+      stagger: 0.08,
       ease: "power1.inOut",
     }
   );
+
   gsap.fromTo(
     ".demo-btn",
     {
@@ -447,15 +439,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#section-5",
         start: "top center",
         toggleActions: "play pause resume reset",
-        // 
       },
       scale: 1,
-      stagger: .08,
+      stagger: 0.08,
       ease: "power1.inOut",
     }
   );
 
-  // footer 
+  // Footer =================================
 
   gsap.fromTo(
     "#qr-code",
@@ -468,14 +459,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
         trigger: "#footer",
         start: "top center",
         toggleActions: "play pause resume reset",
-        // 
       },
       scale: 1,
-      stagger: .08,
+      stagger: 0.08,
       ease: "power1.inOut",
     }
   );
 });
-
-
-
