@@ -15,7 +15,9 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars[0],
-        start: "top 500px",
+        start: "bottom 500px",
+        end: "bottom center",
+        markers: true,
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -34,7 +36,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: helpsYou.chars[0],
-        start: "top 500px",
+        start: "50% 500px",
+        end: "bottom center",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -53,8 +56,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text3.chars[0],
-        start: "top 500px",
-        toggleActions: "restart pause resume restart",
+        start: "50% 500px",
+        end:"bottom center",        toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
       opacity: 1,
@@ -72,8 +75,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: shapeFuture.chars[0],
-        start: "top 500px",
-        toggleActions: "restart pause resume restart",
+        start: "50% 500px",
+        end:"bottom center",        toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
       opacity: 1,
@@ -90,8 +93,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: "#graph-icon",
-        start: "top 500px",
-        toggleActions: "restart pause resume restart",
+        start: "50% 500px",
+        end:"bottom center",        toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
       scale: 1,
@@ -272,7 +275,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     "#marquee",
     {
       scale: 0,
-      x:-5
+      x: -5,
     },
     {
       scrollTrigger: {
@@ -280,7 +283,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         start: "top center",
         toggleActions: "play pause resume reset",
       },
-      x:0,
+      x: 0,
       scale: 1, // Updated to scaleX
       duration: 1,
       ease: "power1.inOut",
