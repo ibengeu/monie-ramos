@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars[0],
-        start: "bottom 500px",
-        end: "bottom center",
+        start: "top 500px",
         markers: true,
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -35,8 +34,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: helpsYou.chars[0],
-        start: "50% 500px",
+        trigger: "#begin",
+        start: "top 500px",
         end: "bottom center",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -55,8 +54,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: text3.chars[0],
-        start: "50% 500px",
+        trigger: "#begin",
+        start: "top 500px",
         end:"bottom center",        toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: shapeFuture.chars[0],
+        trigger: "#begin",
         start: "50% 500px",
         end:"bottom center",        toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -92,7 +91,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: "#graph-icon",
+        trigger: "#begin",
         start: "50% 500px",
         end:"bottom center",        toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: "#comp-image",
+        trigger: "#begin",
         start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
@@ -128,7 +127,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: "#music-icon",
+        trigger: "#begin",
         start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
