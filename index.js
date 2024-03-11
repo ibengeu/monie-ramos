@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars,
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars,
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars,
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars,
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars,
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars,
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars,
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
