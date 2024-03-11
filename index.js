@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text.chars[0],
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: helpsYou.chars[0],
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: text3.chars[0],
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: shapeFuture.chars[0],
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: "#graph-icon",
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: "#comp-image",
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -126,7 +126,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: "#music-icon",
-        start: "300px 500px",
+        start: "top 500px",
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
