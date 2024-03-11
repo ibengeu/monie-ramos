@@ -174,6 +174,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
       ease: "power4.inOut",
     }
   );
+  gsap.fromTo(
+    "#visitors-range",
+    {
+      scaleX: 0.5,
+    },
+    {
+      scrollTrigger: {
+        trigger: ".section-1",
+        start: "top center",
+        toggleActions: "restart pause resume restart",
+      },
+      scaleX: 1.5, // Updated to scaleX
+      duration: 1,
+      ease: "power4.inOut",
+    }
+  );
 
   // Section 3 =================================
 
