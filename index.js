@@ -239,11 +239,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
     },
     {
       scrollTrigger: {
-        trigger: maximize2.words,
-        start: "bottom center",
+        trigger: maximize.words,
+        start: "top center",
         toggleActions: "play pause resume reset",
       },
-      scaleX: 1, // Updated to scaleX
+      scale: 1, // Updated to scaleX
       duration: 1,
       stagger: 0.04,
       ease: "power4.inOut",
@@ -258,10 +258,10 @@ document.addEventListener("DOMContentLoaded", (event) => {
     {
       scrollTrigger: {
         trigger: maximize2.words,
-        start: "bottom center",
+        start: "top center",
         toggleActions: "play pause resume reset",
       },
-      scaleX: 1, // Updated to scaleX
+      scale: 1, // Updated to scaleX
       duration: 1.5,
       stagger: 0.04,
       ease: "power4.inOut",
@@ -272,14 +272,16 @@ document.addEventListener("DOMContentLoaded", (event) => {
     "#marquee",
     {
       scale: 0,
+      x:-5
     },
     {
       scrollTrigger: {
         trigger: maximize2.words,
-        start: "bottom center",
+        start: "top center",
         toggleActions: "play pause resume reset",
       },
-      scaleX: 1, // Updated to scaleX
+      x:0,
+      scale: 1, // Updated to scaleX
       duration: 1,
       ease: "power1.inOut",
     }
