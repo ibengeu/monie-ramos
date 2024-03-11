@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
       scrollTrigger: {
         trigger: text.chars[0],
         start: "top 500px",
-        markers: true,
         toggleActions: "restart pause resume restart",
         ease: "power1.inOut",
       },
@@ -405,6 +404,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
   );
 
   // Section 5 =================================
+
+  
+  gsap.fromTo(
+    "#23-yellow",
+    {
+      scaleX: 0,
+      opacity: 0,
+    },
+    {
+      scrollTrigger: {
+        trigger: "#give-full",
+        start: "top center",
+        markers:true,
+        toggleActions: "play pause resume reset",
+      },
+      scaleX: 1,
+      opacity: 1,
+      ease: "power1.inOut",
+    }
+  );
 
   gsap.fromTo(
     "#getstarted-icon",
